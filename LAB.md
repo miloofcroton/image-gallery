@@ -21,6 +21,9 @@ This is a paired, multi-day lab. For day one, build out:
     
 ## Data
 
+Use the `data.js` helper (see in class demo code) for storing data in local storage. Your api module will likely also need to
+do more of the data manipulation work.
+
 ### Albums
 
 id, title, description, [images]
