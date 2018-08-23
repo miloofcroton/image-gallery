@@ -1,5 +1,7 @@
 <template>
-  
+  <main>
+    <h1>I only listen to vinyl</h1>
+  </main>
 </template>
 
 <script>
