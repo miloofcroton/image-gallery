@@ -35,10 +35,11 @@ id, title, description, url
 * `/about` | About page (make something up)
 * `/albums` | List of albums
 * `/albums/new` | Add a new album
-    * `/albums/:id/thumbnail` | Album detail with thumbnails of images
-    * `/albums/:id/gallery` | Album detail with gallery image viewer
-    * `/albums/:id/list` | Album detail with text list of images
-    * `/albums/:id/new` | Prompt for new image
+* `/albums/:id` | Album detail with child routes:
+    * `thumbnail` | Album detail with thumbnails of images
+    * `gallery` | Album detail with gallery image viewer
+    * `list` | Album detail with text list of images
+    * `new` | Prompt for new image
 
 ## Components
 
