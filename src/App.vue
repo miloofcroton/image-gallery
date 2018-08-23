@@ -1,26 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+  <div class="app">
+    <header>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+    </header>
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue';
-import About from './components/About.vue';
-import Albums from './components/Albums.vue';
-import AddAlbum from './components/AddAlbum.vue';
-import AlbumDetail from './components/AlbumDetail.vue';
 
 export default {
   name: 'app',
-  components: {
-    Home, About, Albums, AddAlbum, AlbumDetail
-  }
+
 };
 </script>
 
 <style>
-#app {
+.app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

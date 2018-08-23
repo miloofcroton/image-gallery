@@ -1,4 +1,7 @@
 <template>
+  <main>
+    <h1>How my life got turned flipped upside down</h1>
+  </main>
   
 </template>
 
