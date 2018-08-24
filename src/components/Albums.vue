@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <Album v-for="album in albumDB"
+    <Album v-for="album in albums"
       :key="album.title"
       :album="album"  
     />
@@ -15,7 +15,7 @@ import Album from './Album';
 
 export default {
   props: {
-    albumDB: Array
+    albums: Array,
   },
   components: {
     Album
