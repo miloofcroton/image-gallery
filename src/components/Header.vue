@@ -37,6 +37,7 @@ h1 {
   font-family: 'Monoton', cursive;
   font-weight: normal;
   margin: 0px auto;
+  text-shadow: 3px 3px #223ee0;
 }
 
 p {
@@ -53,9 +54,8 @@ a {
   font-size: 26px;
   margin: 10px;
   padding: 6px;
-  border: 1px solid #000d55;
   border-radius: 15px;
-  box-shadow: 1px 1px 3px #223ee0;
+  box-shadow: 2px 2px 5px #223ee0;
   text-decoration: none;
 }
 
