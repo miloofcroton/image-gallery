@@ -17,6 +17,8 @@ export default {
 <style scoped>
 
 @import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
 
 h1 {
   font-size: 96px;
@@ -26,7 +28,7 @@ h1 {
 }
 
 p {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 img {
