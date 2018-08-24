@@ -1,26 +1,36 @@
 <template>
   <div class="app">
     <Header/>
-    <router-view :albumDB="albumDB"></router-view>
+    <router-view 
+      :albums="albums"
+      :onAdd="handleAdd"
+    >
+
+    </router-view>
   </div>
 </template>
 
 <script>
 
 import Header from './components/Header';
-import albumDB from './services/albumDB';
+import albumApi from './services/albumApi';
 
 export default {
   name: 'app',
   data() {
     return {
-      albumDB
+      albums: albumApi.getAlbums(),
     };
   },
   components: {
     Header
+  },
+  methods: {
+    handleAdd(album) {
+      const added = albumApi.addAlbum(album);
+      this.$router.push(`/albums/${added.key}`);
+    }
   }
-
 };
 </script>
 
