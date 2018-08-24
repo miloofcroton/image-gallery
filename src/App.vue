@@ -4,7 +4,7 @@
     <router-view 
       :albums="albums"
       :onAdd="handleAdd"
-      :selected="selected"
+      :selected="selectedAlbum"
     >
 
     </router-view>
@@ -14,27 +14,19 @@
 <script>
 
 import Header from './components/Header';
-import albumApi from './services/albumApi';
 
 export default {
   name: 'app',
   data() {
     return {
-      albums: albumApi.getAlbums(),
-      selected: null,
+      selectedAlbum: null,
     };
   },
   components: {
     Header
   },
   methods: {
-    handleAdd(album) {
-      const added = albumApi.addAlbum(album);
-      this.$router.push(`/albums/${added.key}`);
-    },
-    handleSelect(album) {
-      this.selected = album;
-    }
+
   },
 };
 </script>
