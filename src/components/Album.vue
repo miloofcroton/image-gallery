@@ -24,9 +24,8 @@ export default {
 
 <style scoped>
 
-a {
-  text-decoration: none;
-  color: initial;
+p {
+  margin: 5%;
 }
 
 </style>

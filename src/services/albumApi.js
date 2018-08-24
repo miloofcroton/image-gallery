@@ -6,13 +6,13 @@ if(!data.albums) {
     {
       key: shortid.generate(),
       title: 'Football',
-      description: 'Try and tackle this!',
+      description: 'On any given Sunday you\'re gonna win or you\'re gonna lose. The point is - can you win or lose like a man?',
       images: [],
     },
     {
       key: shortid.generate(),
-      title: 'Monster Trucks',
-      description: 'My truck crushes',
+      title: 'Trucks',
+      description: 'The right tool for the job',
       images: [],
     },
     {
@@ -24,13 +24,13 @@ if(!data.albums) {
     {
       key: shortid.generate(),
       title: 'Predatory Cats',
-      description: 'Kill! Kill! Kill!',
+      description: '*silence* \n this is *too* quiet',
       images: [],
     },
     {
       key: shortid.generate(),
-      title: 'Energy Drinks',
-      description: 'Push it to the liiiiiiiimit',
+      title: 'Cookies',
+      description: 'Just like mama made...',
       images: [],
     },
   ];
