@@ -46,11 +46,18 @@ export default {
   getAlbums() {
     return data.albums;
   },
+  getAlbum(key) {
+    return data.albums.find(album => album.key === key);
+  },
   addAlbum(album) {
     album.key = shortid.generate();
     data.albums.push(album);
     return album;
   },
+  addImage(key, image) {
+    this.getAlbum(key).images.push(image);
+  }
+
 };
 
 
