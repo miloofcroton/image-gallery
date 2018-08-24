@@ -1,11 +1,36 @@
 <template>
   <main>
-    <h1>Here's a list of albums!</h1>
-  </main>
+    <h1>Show us your brotogrpahy!</h1>
+    <form>
+      <label>
+        Title: <input v-model="title">
+      </label>
+      <label>
+        Description: <input v-model="description">
+      </label>
+      <button type="submit"> {{ isNew ? 'Add' : 'Update' }}</button>
+      <button type="button">Cancel</button>
+    </form>
+  </main> 
+
 </template>
 
 <script>
 export default {
+  props: {
+    album: Object,
+  },
+  data() {
+    return {
+      title: '',
+      description: '',
+    }
+  },
+  computed: {
+    isNew() {
+      return !this.album;
+    }
+  },
 
 };
 </script>
