@@ -15,15 +15,12 @@
 <script>
 import Album from './Album';
 
-export default {
-  data() {
-    return {
 
-    }
-  },
+export default {
   props: {
     albums: Array,
     selected: String,
+    onSelect: Function
   },
   components: {
     Album
