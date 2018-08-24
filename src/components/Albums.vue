@@ -4,7 +4,7 @@
       :key="album.title"
       :album="album"  
       :selected="selected"
-      :onSelect="handleSelect"
+      :onSelect="onSelect"
     />
     <li id="add-album">
       <router-link to="/add"><img src="../assets/plus-sign.png"></router-link>
@@ -20,7 +20,7 @@ export default {
   props: {
     albums: Array,
     selected: String,
-    onSelect: Function
+    onSelect: Function,
   },
   components: {
     Album
