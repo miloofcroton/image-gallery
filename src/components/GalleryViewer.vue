@@ -1,5 +1,10 @@
 <template>
-  
+  <ul>
+    <Image 
+      :key="image.index"
+      :image="image"
+    />
+  </ul>
 </template>
 
 <script>
