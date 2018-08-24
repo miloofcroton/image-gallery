@@ -8,7 +8,7 @@
 <script>
 
 import Header from './components/Header';
-import albumDB from "./services/albumDB";
+import albumDB from './services/albumDB';
 
 export default {
   name: 'app',
