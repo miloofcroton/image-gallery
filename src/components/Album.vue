@@ -10,7 +10,7 @@
 export default {
   props: {
     album: Object,
-    // selected: Object,
+    selectedAlbum: Object,
     onSelect: Function,
   },
   methods: {
