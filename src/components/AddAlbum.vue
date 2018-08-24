@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Show us your brotogrpahy!</h1>
+    <h1>Show us your brotography!</h1>
     <form>
       <label>
         Title: <input v-model="title">

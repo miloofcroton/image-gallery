@@ -1,7 +1,6 @@
 <template>
   <header>
     <h1>Brogram</h1>
-    <img src="../assets/icon.png">
     <p>Are you with the Brogram?</p>
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
@@ -24,6 +23,10 @@ h1 {
   font-family: 'Monoton', cursive;
   font-weight: normal;
   margin: 0px auto;
+}
+
+p {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 
 img {
