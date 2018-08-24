@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Show us your brotography!</h1>
+    <h1>Don't give us a bad name</h1>
     <form @submit.prevent="handleSubmit">
       <label>
         Title: <input v-model="title">
