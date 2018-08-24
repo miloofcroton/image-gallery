@@ -1,54 +1,24 @@
 <template>
-  <main>
-    <h1>Don't give us a bad name</h1>
-    <form @submit.prevent="handleSubmit">
-      <label>
-        Title: <input v-model="title">
-      </label>
-      <label>
-        Description: <input v-model="description">
-      </label>
-      <button type="submit" > {{ isNew ? 'Add' : 'Update' }}</button>
-      <button type="button">Cancel</button>
-    </form>
-  </main> 
-
+  <AlbumForm :onComplete="handleAdd"/>
 </template>
 
 <script>
+import AlbumForm from './AlbumForm.vue';
+import albumApi from '../services/albumApi';
 
 export default {
-  props: {
-    album: Object,
-    onAdd: Function
-  },
-  data() {
-    return {
-      title: '',
-      description: '',
-    };
-  },
-  computed: {
-    isNew() {
-      return !this.album;
-    }
+  components: {
+    AlbumForm
   },
   methods: {
-    handleSubmit() {
-      const album = {
-        title: this.title,
-        description: this.description
-      };
-      if(!this.isNew) {
-        album.key = this.album.key;
-      }
-      this.onAdd(album);
+    handleAdd(album) {
+      const added = albumApi.addAlbum(album);
+      this.$router.push(`/detail/${added.key}`);
     }
   }
-
 };
 </script>
 
-<style scoped>
+<style>
 
 </style>
