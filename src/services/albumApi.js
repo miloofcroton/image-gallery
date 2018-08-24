@@ -29,6 +29,12 @@ if(!data.albums) {
     },
     {
       key: shortid.generate(),
+      title: 'Mountains',
+      description: '\'There are three sports... racing, bullfighting, and mountaineering - Ernest Hemingway\'',
+      images: [],
+    },
+    {
+      key: shortid.generate(),
       title: 'Cookies',
       description: 'Just like mama made...',
       images: [],
