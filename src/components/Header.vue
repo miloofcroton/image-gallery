@@ -23,7 +23,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 header {
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 5px #000d55;
 }
 
 h1, p, a {
@@ -53,7 +53,7 @@ a {
   padding: 6px;
   border: 1px solid #000d55;
   border-radius: 15px;
-  box-shadow: 2px 2px 5px #000d55;
+  box-shadow: 1px 1px 3px #000d55;
   text-decoration: none;
 }
 
