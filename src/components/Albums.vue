@@ -3,6 +3,8 @@
     <Album v-for="album in albums"
       :key="album.title"
       :album="album"  
+      :selected="selected"
+      :onSelect="handleSelect"
     />
     <li id="add-album">
       <router-link to="/add"><img src="../assets/plus-sign.png"></router-link>
@@ -14,12 +16,18 @@
 import Album from './Album';
 
 export default {
+  data() {
+    return {
+
+    }
+  },
   props: {
     albums: Array,
+    selected: String,
   },
   components: {
     Album
-  }
+  },
 };
 </script>
 

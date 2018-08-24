@@ -23,11 +23,13 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 header {
-  box-shadow: 2px 2px 5px #000d55;
+  box-shadow: 2px 2px 5px #223ee0;
+  background-color: #000d55;
 }
 
 h1, p, a {
-  color: #000d55;
+  /* color: #000d55; */
+  color: white;
 }
 
 h1 {
@@ -53,12 +55,12 @@ a {
   padding: 6px;
   border: 1px solid #000d55;
   border-radius: 15px;
-  box-shadow: 1px 1px 3px #000d55;
+  box-shadow: 1px 1px 3px #223ee0;
   text-decoration: none;
 }
 
 a:hover {
-  background-color: rgb(173, 176, 206);
+  background-color: rgb(92, 105, 250);
 }
 
 

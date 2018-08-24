@@ -4,6 +4,7 @@
     <router-view 
       :albums="albums"
       :onAdd="handleAdd"
+      :selected="selected"
     >
 
     </router-view>
@@ -20,6 +21,7 @@ export default {
   data() {
     return {
       albums: albumApi.getAlbums(),
+      selected: null,
     };
   },
   components: {
@@ -29,8 +31,11 @@ export default {
     handleAdd(album) {
       const added = albumApi.addAlbum(album);
       this.$router.push(`/albums/${added.key}`);
+    },
+    handleSelect(album) {
+      this.selected = album;
     }
-  }
+  },
 };
 </script>
 
