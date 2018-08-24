@@ -1,7 +1,6 @@
 <template>
   <main>
     <h1>Home Page</h1>
-    <img src="../assets/logo.png">
   </main>
 </template>
 
@@ -14,7 +13,7 @@ export default {
 <style scoped>
 
 h1 {
-  font-size: 48px;
+  font-size: 32px;
 }
 
 img {
