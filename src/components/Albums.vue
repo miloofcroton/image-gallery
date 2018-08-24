@@ -4,7 +4,9 @@
       :key="album.title"
       :album="album"  
     />
-    <li id="add-album"></li>
+    <li id="add-album">
+      <router-link to="/add"><img src="../assets/plus-sign.png"></router-link>
+    </li>
   </ul>
 </template>
 
@@ -39,11 +41,11 @@ li {
   border: 1px solid #aaa;
 }
 
-#add-album {
-  background-image: url('../assets/plus-sign.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+img {
+  height: 250px;
 
 }
+
+
 
 </style>
