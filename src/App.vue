@@ -1,11 +1,7 @@
 <template>
   <div class="app">
     <Header/>
-    <router-view 
-      :albums="albums"
-      :onAdd="handleAdd"
-      :selected="selectedAlbum"
-    >
+    <router-view>
 
     </router-view>
   </div>
