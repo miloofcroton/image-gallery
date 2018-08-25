@@ -39,12 +39,31 @@ export default {
 
 <style scoped>
 
+a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 10px;
+  padding: 6px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 2px 2px 5px #223ee0;
+  text-decoration: none;
+  text-shadow: 1px 1px #223ee0;
+  background-color: #000d55;
+}
+
 h2 {
   font-size: 32px;
 }
 
 p {
+  font-family: 'Roboto', sans-serif;
   font-size: 16;
+}
+
+a:hover {
+  background-color: rgb(92, 105, 250);
 }
 
 </style>
