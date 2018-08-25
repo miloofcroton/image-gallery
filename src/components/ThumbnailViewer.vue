@@ -1,29 +1,21 @@
 <template>
   <ul class="tile-view">
-    <h2>I'm the thumbnail viewer!</h2>
-    <Image v-for="image in images"
-    :key="image.index"
+    <ImageCard v-for="image in album.images"
+    :key="image.key"
     :image="image"
     />
   </ul>
 </template>
 
 <script>
-import Image from './Image';
+import ImageCard from './ImageCard';
 
 export default {
-  data() {
-    return {
-      images: album.images,
-      image: images[index],
-      index: 1,
-    }
-  },
   props: {
     album: Object
   },
   components: {
-    Image
+    ImageCard
   }
 };
 </script>

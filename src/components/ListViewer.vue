@@ -1,28 +1,26 @@
 <template>
-  <ul>
-    <h2>I'm the list viewer!</h2>
-    <Image v-for="image in images"
-    :key="image.index"
+  <ul class="tile-view">
+    <ImageCard v-for="image in album.images"
+    :key="image.key"
     :image="image"
     />
   </ul>
 </template>
 
 <script>
-import Image from './Image';
+import ImageCard from './ImageCard';
 
 export default {
   props: {
-    images: Array
+    album: Object
   },
   components: {
-    Image
+    ImageCard
   }
 };
 </script>
 
 <style scoped>
-
 
 ul.list-view {
   display: block;
@@ -33,5 +31,4 @@ ul.list-view li {
   text-align: left;
   border: none;
 }
-
 </style>
