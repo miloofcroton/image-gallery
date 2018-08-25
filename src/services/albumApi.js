@@ -8,11 +8,36 @@ if(!data.albums) {
       title: 'Football',
       description: 'On any given Sunday you\'re gonna win or you\'re gonna lose. The point is - can you win or lose like a man?',
       images: [
-        'http://bostonspiritmagazine.com/wp-content/uploads/2015/02/Brady_Patriots_Superbowl_XLIX.jpg',
-        'https://cdn.vox-cdn.com/thumbor/QjDknDMzSypMDHJPI_m1JAYgTSY=/0x0:4000x2667/1200x800/filters:focal(0x0:4000x2667)/cdn.vox-cdn.com/uploads/chorus_image/image/13283525/160620078.0.jpg',
-        'https://sports.cbsimg.net/images/blogs/brian-urlacher-retires.jpg',
-        'https://alchetron.com/cdn/dante-hall-8316f4be-3757-4efe-a3b2-f7133969904-resize-750.jpeg',
-        'https://1.bp.blogspot.com/_SeggsIl9ILQ/SHQPvXkYN0I/AAAAAAAAAAU/mfD1w_rn_AU/w1200-h630-p-k-no-nu/Sean%2BTaylor%2Bwalking%2Boff%2Bthe%2Bfield%2Bfor%2Bthe%2Blast%2Btime%5B1%5D.jpg',
+        {
+          key: shortid.generate(),
+          title: 'title',
+          description: 'description',
+          url:'http://bostonspiritmagazine.com/wp-content/uploads/2015/02/Brady_Patriots_Superbowl_XLIX.jpg',
+        },
+        {
+          key: shortid.generate(),
+          title: 'title',
+          description: 'description',
+          url:'https://1.bp.blogspot.com/_SeggsIl9ILQ/SHQPvXkYN0I/AAAAAAAAAAU/mfD1w_rn_AU/w1200-h630-p-k-no-nu/Sean%2BTaylor%2Bwalking%2Boff%2Bthe%2Bfield%2Bfor%2Bthe%2Blast%2Btime%5B1%5D.jpg',
+        },
+        {
+          key: shortid.generate(),
+          title: 'title',
+          description: 'description',
+          url:'https://alchetron.com/cdn/dante-hall-8316f4be-3757-4efe-a3b2-f7133969904-resize-750.jpeg',
+        },
+        {
+          key: shortid.generate(),
+          title: 'title',
+          description: 'description',
+          url:'https://sports.cbsimg.net/images/blogs/brian-urlacher-retires.jpg',
+        },
+        {
+          key: shortid.generate(),
+          title: 'title',
+          description: 'description',
+          url:'https://cdn.vox-cdn.com/thumbor/QjDknDMzSypMDHJPI_m1JAYgTSY=/0x0:4000x2667/1200x800/filters:focal(0x0:4000x2667)/cdn.vox-cdn.com/uploads/chorus_image/image/13283525/160620078.0.jpg',
+        },   
       ],
     },
     {
