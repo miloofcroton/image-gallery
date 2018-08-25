@@ -1,5 +1,5 @@
 <template>
-  <ul class="tile-view">
+  <ul class="list-view">
     <ImageCard v-for="image in album.images"
     :key="image.key"
     :image="image"
@@ -28,7 +28,19 @@ ul.list-view {
 }
 
 ul.list-view li {
-  text-align: left;
-  border: none;
+  display: grid;
+  grid-template-areas: "image text";
+  grid-template-columns: 250px auto;
+  margin: 0px auto;
+  width: 65%;
 }
+
+ul.list-view li img {
+  grid-area: image;
+}
+
+ul.list-view li section {
+  grid-area: text;
+}
+
 </style>

@@ -1,8 +1,10 @@
 <template>
   <li @click="handleClick">
     <img :src="image.url">
-    <p>{{ image.title }}</p>
-    <p>{{ image.description }}</p>
+    <section>
+      <p>{{ image.title }}</p>
+      <p>{{ image.description }}</p>
+    </section>
   </li>
 </template>
 <script>
