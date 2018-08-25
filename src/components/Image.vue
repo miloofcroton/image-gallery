@@ -1,13 +1,13 @@
 <template>
   <li @click="handleClick">
-    <img :src="album.image[index]">
+    <img :src="image">
   </li>
 </template>
 <script>
 
 export default {
   props: {
-    album: Object,
+    image: String,
     selectedAlbum: Object,
     onSelect: Function,
   },
