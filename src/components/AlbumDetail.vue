@@ -4,16 +4,16 @@
     <p> {{ album.description }}</p>
     
     <p>
-      <router-link to="/detail/:key/new">Add a new image</router-link>
+      <router-link to="new">Add a new image</router-link>
     </p>
 
     <p>
-      <router-link to="/detail/:key/thumbnail">Thumbnail View</router-link>
-      <router-link to="/detail/:key/list">List View</router-link>
-      <router-link to="/detail/:key/gallery">Gallery View</router-link>
+      <router-link to="thumbnail">Thumbnail View</router-link>
+      <router-link to="list">List View</router-link>
+      <router-link to="gallery">Gallery View</router-link>
     </p>
 
-    <router-view :images="images"></router-view>
+    <router-view :album="album"></router-view>
 
   </main>
 </template>
