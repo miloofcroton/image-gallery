@@ -1,6 +1,8 @@
 <template>
   <li @click="handleClick">
-    <img :src="image">
+    <p>{{ image.title }}</p>
+    <p>{{ image.description }}</p>
+    <img :src="image.url">
   </li>
 </template>
 <script>
@@ -21,8 +23,9 @@ export default {
 
 <style scoped>
 
-p {
-  margin: 5%;
+img {
+  width: 250px;
+  height: 250px;
 }
 
 </style>
