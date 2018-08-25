@@ -19,10 +19,10 @@ export default new VueRouter({
       path: '/detail/:key',
       component: AlbumDetail,
       children: [
-        { path: '/detail/:key/thumbnail', component: ThumbnailViewer },
-        { path: '/detail/:key/gallery', component: GalleryViewer },
-        { path: '/detail/:key/list', component: ListViewer },
-        { path: '/detail/:key/new', component: NewImage },
+        { path: 'thumbnail', component: ThumbnailViewer },
+        { path: 'gallery', component: GalleryViewer },
+        { path: 'list', component: ListViewer },
+        { path: 'new', component: NewImage },
         { path: '', redirect: 'thumbnail' }
       ]
     },
