@@ -1,9 +1,7 @@
 <template>
   <div class="app">
     <Header/>
-    <router-view>
-
-    </router-view>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -29,6 +27,10 @@ export default {
 
 <style>
 
+
+body, html, .app {
+  height: 100%;
+}
 body{
   margin: 0px;
 }
@@ -38,8 +40,10 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #000d55;
   margin-top: 0px;
+  /* background-color: #000d55; */
 }
+
 
 </style>
