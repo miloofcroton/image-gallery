@@ -1,14 +1,18 @@
+
 <template>
   <ul class="albums-list">
+    <li 
+      @click="handleNew"
+      id="add-album"
+    >
+      <img src="../assets/plus-sign.png">
+    </li>
     <Album v-for="album in albums"
       :key="album.title"
       :album="album"  
       :selected="selected"
       :onSelect="onSelect"
     />
-    <li id="add-album">
-      <router-link to="/add"><img src="../assets/plus-sign.png"></router-link>
-    </li>
   </ul>
 </template>
 
@@ -19,12 +23,21 @@ import Album from './Album';
 export default {
   props: {
     albums: Array,
-    selected: String,
+    selected: Object,
     onSelect: Function,
   },
   components: {
     Album
   },
+  data() {
+    return {
+    };
+  },
+  methods: {
+    handleNew() {
+      this.onSelect(null);
+    }
+},
 };
 </script>
 

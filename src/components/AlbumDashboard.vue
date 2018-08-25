@@ -17,6 +17,7 @@ import albumApi from '../services/albumApi';
 import Albums from './Albums';
 import AlbumViewer from './AlbumViewer';
 
+
 export default {
   name: 'albumDashboard',
   data() {
@@ -27,7 +28,7 @@ export default {
   },
   components: {
     Albums,
-    AlbumViewer
+    AlbumViewer,
   },
   methods: {
     handleSelect(album) {
@@ -58,11 +59,13 @@ export default {
 }
 
 .albums-list {
-  grid-area: albums
+  grid-area: albums;
 }
 
 .album-viewer {
-  grid-area: viewer
+  grid-area: viewer;
 }
+
+
 
 </style>

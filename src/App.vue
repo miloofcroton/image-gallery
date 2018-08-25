@@ -11,11 +11,6 @@ import Header from './components/Header';
 
 export default {
   name: 'app',
-  data() {
-    return {
-      selectedAlbum: null,
-    };
-  },
   components: {
     Header
   },

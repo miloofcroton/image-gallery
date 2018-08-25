@@ -1,5 +1,8 @@
 <template>
-  <AlbumForm :onComplete="handleAdd"/>
+  <AlbumForm 
+    class="add-album"
+    :onComplete="handleAdd"
+  />
 </template>
 
 <script>

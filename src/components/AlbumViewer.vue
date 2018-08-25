@@ -9,7 +9,7 @@
       <AlbumForm 
         v-if="editing" 
         :album="album"
-        :onUpdate="handleUpdate"
+        :onComplete="handleUpdate"
         :onCancel="handleEndEdit"      
       />
 
@@ -18,13 +18,15 @@
     </section>
 
     <section v-else>
-      <p>Please choose an album</p>
+      <AddAlbum
+      
+      />
     </section>
   </div>
 </template>
 
 <script>
-
+import AddAlbum from './AddAlbum.vue';
 import AlbumForm from './AlbumForm.vue';
 import AlbumDisplay from './AlbumDisplay.vue';
 
@@ -47,7 +49,8 @@ export default {
   },
   components: {
     AlbumForm,
-    AlbumDisplay
+    AlbumDisplay,
+    AddAlbum
   },
   methods: {
     handleEndEdit() {
@@ -56,14 +59,12 @@ export default {
     handleUpdate(album) {
       this.onUpdate(album);
       this.handleEndEdit();
-    }
+    },
+    handleAdd(album) {
+      const added = albumApi.addAlbum(album);
+      this.$router.push(`/albums/${added.key}`);
+    },
   }
-  // methods: {
-  //   handleAdd(album) {
-  //     const added = albumApi.addAlbum(album);
-  //     this.$router.push(`/albums/${added.key}`);
-  //   },
-  // }
 };
 </script>
 

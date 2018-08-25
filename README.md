@@ -4,10 +4,7 @@
 
 * fix
   * save new image
-  * gallery viewer
-  * dashboard editor
-    * make it actually save changes about album (or move this edit function to the album details page)
-  * make add albums in-line on albums page (dashboard component)
+
 * style essentially everything
 * static content:
   * stuff for home page

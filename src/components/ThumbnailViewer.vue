@@ -28,4 +28,10 @@ ul.tile-view {
   grid-gap: 25px;
 }
 
+li {
+  padding: 10px;
+}
+
+
+
 </style>

@@ -1,9 +1,7 @@
 <template>
   <li @click="handleClick">
-    <router-link :to="`/detail/${album.key}`">
       <h3>{{ album.title }}</h3>
       <p>{{ album.description }}</p>
-    </router-link>
   </li>
 </template>
 <script>

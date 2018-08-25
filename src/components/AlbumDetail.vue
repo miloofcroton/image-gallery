@@ -1,30 +1,32 @@
 <template>
   <main>
-    <h2> {{ album.title }}</h2>
-    <p> {{ album.description }}</p>
-    
-    <p>
-      <router-link to="new">Add a new image</router-link>
-    </p>
+    <div class="album-view">
+      <h2> {{ album.title }}</h2>
+      <p> {{ album.description }}</p>
 
-    <p>
-      <router-link to="thumbnail">Thumbnail View</router-link>
-      <router-link to="list">List View</router-link>
-      <router-link to="gallery">Gallery View</router-link>
-    </p>
+      <p>
+        <router-link to="thumbnail">Thumbnail View</router-link>
+        <router-link to="list">List View</router-link>
+        <router-link to="gallery">Gallery View</router-link>
+      </p>
 
-    <router-view :album="album"></router-view>
+      <router-view :album="album"></router-view>
+    </div>
+    <div class="add-image">
+      <NewImage/>
+    </div>
 
   </main>
 </template>
 
 <script>
 import albumApi from '../services/albumApi';
-
+import NewImage from './NewImage.vue';
 
 export default {
   name: 'app',
   components: {
+    NewImage
   },
   data() {
     return {
@@ -39,6 +41,25 @@ export default {
 
 <style scoped>
 
+
+main {
+  display:grid;
+  grid-template-columns: 40% 40% 20%;
+  grid-template-areas: "image image form"
+                       "image image form"
+                       "image image form";
+            
+}
+
+.album-view {
+  grid-area: image;
+}
+
+.add-image {
+  grid-area: form;
+}
+
+
 a {
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
@@ -52,6 +73,9 @@ a {
   text-shadow: 1px 1px #223ee0;
   background-color: #000d55;
 }
+a:hover {
+  background-color: rgb(92, 105, 250);
+}
 
 h2 {
   font-size: 32px;
@@ -62,8 +86,5 @@ p {
   font-size: 16;
 }
 
-a:hover {
-  background-color: rgb(92, 105, 250);
-}
 
 </style>

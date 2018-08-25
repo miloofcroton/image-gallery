@@ -1,5 +1,5 @@
 <template>
-  <li @click="handleClick">
+  <li>
     <img :src="image.url">
     <section>
       <p>{{ image.title }}</p>
@@ -11,14 +11,7 @@
 
 export default {
   props: {
-    image: String,
-    selectedAlbum: Object,
-    onSelect: Function,
-  },
-  methods: {
-    handleClick() {
-      this.onSelect(this.album);
-    }
+    image: Object,
   },
 };
 </script>
@@ -28,11 +21,11 @@ export default {
 img {
   width: 200px;
   height: 200px;
+  border-radius: 5px;
 }
 
 li {
   cursor: pointer;
-  
   padding: 5px 0px;
   list-style: none;
   text-align: center;
