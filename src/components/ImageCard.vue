@@ -39,8 +39,8 @@ li {
   border-radius: 12px;
   color: white;
   box-shadow: 1px 1px 3px #223ee0;
-  background-color: #223ee0;
-  text-shadow: 3px 3px #000d55;
+  text-shadow: 3px 3px #223ee0;
+  background-color: #000d55;
 }
 
 </style>

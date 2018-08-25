@@ -47,8 +47,8 @@ a {
   padding: 6px;
   border-radius: 15px;
   color: white;
-  box-shadow: 2px 2px 5px #223ee0;
   text-decoration: none;
+  box-shadow: 2px 2px 5px #223ee0;
   text-shadow: 1px 1px #223ee0;
   background-color: #000d55;
 }

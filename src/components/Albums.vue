@@ -48,14 +48,14 @@ li {
   border-radius: 12px;
   color: white;
   box-shadow: 1px 1px 3px #223ee0;
-  background-color: #223ee0;
-  text-shadow: 3px 3px #000d55;
+  text-shadow: 3px 3px #223ee0;
+  background-color: #000d55;
 }
 
 li:hover {
   box-shadow: 2px 2px 5px #223ee0;
-  background-color: rgb(113, 251, 228);
-  text-shadow: 1px 1px rgb(68, 164, 243);
+  background-color: rgb(92, 105, 250);
+  text-shadow: 3px 3px #000d55;
 }
 
 

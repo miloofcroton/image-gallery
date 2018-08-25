@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>Shots In The Dark</h1>
-    <p>Photos that weren't too late</p>
+    <p>(But you're not too late)</p>
     <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
