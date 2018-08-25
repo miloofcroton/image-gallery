@@ -43,6 +43,8 @@ h1 {
 p {
   font-family: 'Rajdhani', sans-serif;
   font-size: 24px;
+  text-shadow: 3px 3px #223ee0;
+
 }
 
 nav {
@@ -57,6 +59,7 @@ a {
   border-radius: 15px;
   box-shadow: 2px 2px 5px #223ee0;
   text-decoration: none;
+  text-shadow: 2px 2px #223ee0;
 }
 
 a:hover {
