@@ -4,6 +4,7 @@
     :onCancel="handleEndEdit"
     :onUpdate="handleUpdate"
     :image="image"
+    :album="album"
   />
 </template>
 
@@ -12,12 +13,15 @@ import ImageForm from './ImageForm.vue';
 import albumApi from '../services/albumApi';
 
 export default {
+  props: {
+    album: Object,
+  },
   components: {
     ImageForm
   },
   methods: {
-    handleAdd(album) {
-      const added = albumApi.addImage(album, key); //where to get key?
+    handleAdd(key,image) {
+      const added = albumApi.addImage(album.key, image); //where to get key?
       this.$router.push(`/albums/${added.key}`); //this isn't right
     }
   }

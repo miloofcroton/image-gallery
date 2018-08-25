@@ -13,7 +13,7 @@
       <router-view :album="album"></router-view>
     </div>
     <div class="add-image">
-      <NewImage/>
+      <NewImage :album="album"/>
     </div>
 
   </main>

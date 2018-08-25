@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       albums: albumApi.getAlbums(),
-      selectedAlbum: null
+      selectedAlbum: null,
     };
   },
   components: {

@@ -26,28 +26,31 @@ export default {
   props: {
     album: Object,
     onComplete: Function,
-    onCancel: Function
+    onCancel: Function,
+  
   },
   data() {
     return {
       key: '',
       imageURL: '',
+      title: '',
+      description: '',
     };
   },
   created() {
     const image = this.image;
-    this.imageURL = image.title;
+    this.imageURL = image.imageURL;
+    this.title = image.title;
+    this.description = image.description;
   },
   methods: {
     handleSubmit() {
       const image = {
-        title: this.imageURL,
+        title: this.title,
+        imageURL: this.imageURL,
+        description: this.description,
       };
-
-      // the rest of this is wrong
-
-      // album.key = this.album.key;
-      // this.onComplete(album);
+      this.onComplete(album,image);
     }
   }
 };
