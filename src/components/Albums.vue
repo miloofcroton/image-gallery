@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="albums-list">
     <Album v-for="album in albums"
       :key="album.title"
       :album="album"  
@@ -34,23 +34,40 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
-
 }
 
 li {
+  cursor: pointer;
   width: 250px;
   height: 250px;
-  justify-self: center;
+  padding: 5px 0px;
   list-style: none;
   text-align: center;
-  border: 1px solid #aaa;
+  justify-self: center;
+  border: 1px solid rgb(177, 255, 242);
+  border-radius: 12px;
+  color: white;
+  box-shadow: 1px 1px 3px #223ee0;
+  text-shadow: 3px 3px #223ee0;
+  background-color: #000d55;
 }
+
+li:hover {
+  box-shadow: 2px 2px 5px #223ee0;
+  background-color: rgb(92, 105, 250);
+  text-shadow: 3px 3px #000d55;
+}
+
+
 
 img {
   height: 250px;
 
 }
 
+.add-album {
+  background-color: #586ff0;
+}
 
 
 </style>

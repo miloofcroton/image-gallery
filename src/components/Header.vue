@@ -1,7 +1,7 @@
 <template>
   <header>
-    <h1>Shot in the Dark</h1>
-    <p>Photos that weren't too late</p>
+    <h1>Shots In The Dark</h1>
+    <p>(But you're not too late)</p>
     <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -28,7 +28,6 @@ header {
 }
 
 h1, p, a {
-  /* color: #000d55; */
   color: white;
 }
 

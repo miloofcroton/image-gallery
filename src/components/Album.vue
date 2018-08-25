@@ -23,8 +23,27 @@ export default {
 
 <style scoped>
 
+
+
+.selected {
+  background:rgb(126, 124, 124);
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 130%;
+}
+
+h3, p {
+  color: white;
+}
+
 p {
   margin: 5%;
+}
+
+a {
+  text-decoration: none;
 }
 
 </style>

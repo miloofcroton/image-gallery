@@ -49,5 +49,20 @@ export default {
 
 <style>
 
+.dashboard {
+  display:grid;                       
+  grid-template-areas: "albums albums viewer"
+                       "albums albums viewer"
+                       "albums albums viewer";
+            
+}
+
+.albums-list {
+  grid-area: albums
+}
+
+.album-viewer {
+  grid-area: viewer
+}
 
 </style>

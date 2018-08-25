@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div class="album-viewer">
     <section v-if="album">
       <p v-if="!editing">
         <button @click="editing = true">Edit</button>
