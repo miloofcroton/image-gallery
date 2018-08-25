@@ -12,8 +12,15 @@
 import Image from './Image';
 
 export default {
+  data() {
+    return {
+      images: album.images,
+      image: images[index],
+      index: 1,
+    }
+  },
   props: {
-    images: Array
+    album: Object
   },
   components: {
     Image
