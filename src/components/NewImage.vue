@@ -25,7 +25,7 @@ export default {
     handleAdd(image) {
       const added = albumApi.addImage(image); //where to get key?
       console.log(added)
-      this.$router.push(`/albums/${added}`); //this isn't right
+      this.$router.push(`/albums/${added.key}`); //this isn't right
       
 },
   handleUpdate(album) {
