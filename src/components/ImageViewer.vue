@@ -1,24 +1,24 @@
 <template>
 
-  <div class="album-viewer">
-    <section v-if="album">
+  <div class="image-viewer">
+    <section v-if="image">
       <p v-if="!editing">
         <button @click="editing = true">Edit</button>
       </p>
 
-      <AlbumForm 
+      <ImageForm 
         v-if="editing" 
-        :album="album"
+        :image="image"
         :onComplete="handleUpdate"
         :onCancel="handleEndEdit"      
       />
 
-      <AlbumDisplay v-else :album="album"/>
+      <ImageDisplay v-else :image="image"/>
       
     </section>
 
     <section v-else>
-      <AddAlbum
+      <NewImage
       
       />
     </section>
@@ -26,13 +26,14 @@
 </template>
 
 <script>
-import AddAlbum from './AddAlbum.vue';
-import AlbumForm from './AlbumForm.vue';
-import AlbumDisplay from './AlbumDisplay.vue';
+import NewImage from './NewImage.vue';
+import ImageForm from './ImageForm.vue';
+import ImageDisplay from './ImageDisplay.vue';
+import albumApi from '../services/albumApi.js';
 
 export default {
   props: {
-    album: Object,
+    image: Object,
     onUpdate: Function
   },
   data() {
@@ -41,24 +42,28 @@ export default {
     };
   },
   watch: {
-    album(newAlbum, oldAlbum) {
-      if(newAlbum !== oldAlbum) {
+    image(newImage, oldImage) {
+      if(newImage !== oldImage) {
         this.editing = false;
       }
     }
   },
   components: {
-    AlbumForm,
-    AlbumDisplay,
-    AddAlbum
+    NewImage,
+    ImageDisplay,
+    ImageForm
   },
   methods: {
     handleEndEdit() {
       this.editing = false;
     },
-    handleUpdate(album) {
-      this.onUpdate(album);
+    handleUpdate(image) {
+      this.onUpdate(image);
       this.handleEndEdit();
+    },
+    handleAdd(image) {
+      const added = albumApi.addAlbum(image);
+      this.$router.push(`/albums/${added.key}`); //fix this line
     },
   }
 };

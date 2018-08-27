@@ -20,7 +20,7 @@ export default {
     ImageForm
   },
   methods: {
-    handleAdd(key,image) {
+    handleAdd(key, image, album) {
       const added = albumApi.addImage(album.key, image); //where to get key?
       this.$router.push(`/albums/${added.key}`); //this isn't right
     }

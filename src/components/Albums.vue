@@ -37,7 +37,7 @@ export default {
     handleNew() {
       this.onSelect(null);
     }
-},
+  },
 };
 </script>
 

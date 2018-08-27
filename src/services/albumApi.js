@@ -259,10 +259,10 @@ export default {
     data.albums.push(album);
     return album;
   },
-  addImage(key,image) {
+  addImage(key, image) {
     image.key = shortid.generate();
     const album = data.albums.find(element => 
-      {return element.key == key}
+    {return element.key === key;}
     );
     album.images.push(image);    
   }

@@ -50,7 +50,7 @@ export default {
         imageURL: this.imageURL,
         description: this.description,
       };
-      this.onComplete(album,image);
+      this.onComplete(image);
     }
   }
 };
