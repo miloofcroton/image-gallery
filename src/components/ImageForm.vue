@@ -24,9 +24,11 @@
 <script>
 export default {
   props: {
+    image: Object,
     album: Object,
     onComplete: Function,
     onCancel: Function,
+
   
   },
   data() {
@@ -37,8 +39,16 @@ export default {
       description: '',
     };
   },
+  computed: {
+    isNew() {
+      return this.image === undefined;
+    }
+  },
   created() {
+    const album = this.album;
     const image = this.image;
+    if(this.isNew) return;
+
     this.imageURL = image.imageURL;
     this.title = image.title;
     this.description = image.description;
@@ -50,7 +60,10 @@ export default {
         imageURL: this.imageURL,
         description: this.description,
       };
-      this.onComplete(album,image);
+      if(!this.isNew) {
+        image.key = this.image.key;
+      }
+      this.onComplete(image);
     }
   }
 };

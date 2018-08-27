@@ -259,12 +259,13 @@ export default {
     data.albums.push(album);
     return album;
   },
-  addImage(key,image) {
+  addImage(image) {
     image.key = shortid.generate();
-    const album = data.albums.find(element => 
-      {return element.key == key}
-    );
-    album.images.push(image);    
+    // const album = data.albums.images.find(element => 
+    //   {return element.key == key}
+    // );
+    // data.albums.images.push(image);
+    return image    
   }
 };
 

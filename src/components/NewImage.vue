@@ -15,17 +15,28 @@ import albumApi from '../services/albumApi';
 export default {
   props: {
     album: Object,
+    image: Object,
   },
   components: {
     ImageForm
   },
+  
   methods: {
-    handleAdd(key,image) {
-      const added = albumApi.addImage(album.key, image); //where to get key?
-      this.$router.push(`/albums/${added.key}`); //this isn't right
-    }
-  }
-};
+    handleAdd(image) {
+      const added = albumApi.addImage(image); //where to get key?
+      console.log(added)
+      this.$router.push(`/albums/${added}`); //this isn't right
+      
+},
+  handleUpdate(album) {
+      this.onUpdate(album);
+      this.handleEndEdit();
+    },  
+    handleEndEdit() {
+      this.editing = false;
+    },
+  },
+}
 </script>
 
 <style>

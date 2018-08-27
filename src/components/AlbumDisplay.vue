@@ -4,13 +4,20 @@
     <p>{{ album.description }}</p>
     <router-link :to="`/detail/${album.key}`">See Full Album</router-link>
   </section>
+
 </template>
+
 
 <script>
 
 export default {
   props: {
     album: Object
+  },
+  data() {
+    return {
+
+    }
   }
 };
 
